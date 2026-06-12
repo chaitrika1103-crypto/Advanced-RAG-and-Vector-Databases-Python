@@ -39,3 +39,4 @@ pip install openai pinecone-client
 - **Index Name:** `ecommerce-openai`
 - **Dimension:** `1536` (Must match OpenAI `text-embedding-3-small`)
 - **Metric:** `Cosine`
+
