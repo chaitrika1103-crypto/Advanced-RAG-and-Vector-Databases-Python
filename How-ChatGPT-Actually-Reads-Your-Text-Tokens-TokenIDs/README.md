@@ -3,18 +3,45 @@ TL;DR : > LLMs cannot read raw characters directly; instead, they rely on a toke
 By using OpenAI's fast tiktoken library in Python, developers can programmatically encode text inputs into discrete numerical arrays required by embeddings and vector databases. 
 This precise processing optimization improves context window budgeting, tracks strict semantic splits, and lowers overall API computing costs.
 
-Video Timestamps 
-[00:01] - Introduction to tokens and token IDs output
-[00:29] - How to install and import OpenAI tiktoken library in Python
-[00:44] - Setting up tokenizer encoding for GPT-4o-mini model
-[01:09] - Handling dynamic text input for text tokenization
-[01:17] - Using tokenizer encode method to generate token IDs
-[01:55] - Parsing through token IDs list using Python loops
-[02:26] - Fixing syntax errors in Python text tokenization script
-[02:54] - Final text to token IDs code verification and output
+# 🧠 Mastering LLM Text Processing with OpenAI Tiktoken
 
-This repository contains a lightweight, production-ready Python script demonstrating how Large Language Models (LLMs) like ChatGPT convert raw human text strings into machine-readable tokens and numerical token IDs using OpenAI’s highly optimized tiktoken library.
+## 📌 Overview
+Large Language Models (LLMs) like GPT-4o-mini cannot understand raw text directly.  
+Instead, they convert text into **tokens** using a process called *tokenization*.
 
-Installation
-Ensure you have Python installed, then install the official tokenization engine:
+This project explains how OpenAI's `tiktoken` library works and how text is converted into **Token IDs** for model processing.
+
+---
+
+## 🎯 Key Idea (TL;DR)
+
+LLMs do NOT read sentences like humans.  
+They:
+- Break text into **tokens (sub-words)**
+- Convert tokens into **numeric IDs**
+- Process these IDs inside neural networks
+
+This improves:
+- Context handling
+- Memory efficiency
+- API cost optimization
+
+---
+
+## 🚀 Introduction
+
+Ever wondered how ChatGPT understands language?
+
+It doesn’t read characters or words directly.  
+Instead, it uses **tokenization**, which converts text into machine-readable numbers.
+
+In this guide, we explore how to use OpenAI’s `tiktoken` library to visualize this process in Python.
+
+---
+
+## 🛠️ Installation
+
+Install the required library:
+
+```bash
 pip install tiktoken
